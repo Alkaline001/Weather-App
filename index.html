@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="view.py">
+    <link rel="stylesheet" href="settings.py">
+    <link rel="stylesheet" href="urls.py">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            text-align: center;
+            margin-top: 50px;
+        }
+        .weather {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            width: 300px;
+            margin: 0 auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .weather h2 {
+            font-size: 24px;
+        }
+        .weather p {
+            font-size: 18px;
+        }
+        input[type="text"] {
+            padding: 10px;
+            margin: 10px;
+            width: 250px;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px;
+            font-size: 16px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Weather App</h1>
+        <form method="get" action="/">
+            <input type="text" name="city" placeholder="Enter city name" value="">
+            <button type="submit">Get Weather</button>
+        </form>
+        <div class="weather">
+            <h2>weather_data.city </h2>
+            <p>Temperature: °C</p>
+            <p>Description: </p>
+            <p>Humidity: %</p>
+            <p>Wind Speed:  m/s</p>
+        </div>
+    </div>
+</body>
+</html>
